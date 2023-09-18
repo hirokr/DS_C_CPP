@@ -24,13 +24,24 @@ void Print(Node* head){
     }
 }
 
-Node* Reverse_recursion(Node* Head){
-    Node* temp = Head;
-    if(temp == NULL){
-        cout<<'h';
-        return Head;    ;
+void Reverse_recursion_print(Node* Head){
+    if(Head == NULL){
+        return ;    ;
     }
-    Head = Reverse_recursion(temp->next);
+    Reverse_recursion_print(Head->next);
+    cout<<Head->data<<" ";
+}
+
+void Reverse_recursion(Node* first){
+    Node* temp = first;
+    if(temp->next == NULL){
+        first = temp;
+        return;
+    }
+    Reverse_recursion(temp->next);
+    
+
+
 }
 
 int main(){
@@ -40,6 +51,7 @@ int main(){
     for(int i = 0; i<4; i++){
         head = Insert(head, arr[i]);
     }
-    head = Reverse_recursion(head);
+    // Reverse_recursion_print(head);
+    Reverse_recursion(head);
     Print(head);
 }
