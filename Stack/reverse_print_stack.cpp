@@ -35,7 +35,7 @@ void Reverse_stack_print(){
         temp = temp->next;
     }
     Node* top = NULL;
-    cout<<"\nReverse: ";
+    cout<<"\nReverse:  ";
     while(!S.empty()){
         top = S.top();
         cout<<top->data<<" ";
