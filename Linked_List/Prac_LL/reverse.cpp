@@ -16,7 +16,16 @@ void Insert(int x){
     head = temp;
 }
 void Reverse(){
-
+    Node* prev = NULL;
+    Node* curr = head;
+    Node* next = head;
+    while(curr != NULL){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev; 
 }
 
 void Print(){
