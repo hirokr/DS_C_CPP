@@ -36,7 +36,7 @@ public:
         MultiDimensional :: printArray(); 
     }
 
-    void addition(){
+    void  addition(){
         int newArray[3][3];
         for(int i = 0; i <size; i++){
             for(int j = 0; j<size; j++){
