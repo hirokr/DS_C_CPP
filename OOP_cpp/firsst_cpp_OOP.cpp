@@ -8,17 +8,16 @@ public:
     int Age;
 
     void IntroduceYourself() {
-        cout <<"Name- "<<Name<<endl;
+        string Name = "Ra";
+        cout <<"Name- "<<Employee::Name<<endl;
         cout <<"Company- "<<Company<<endl;
         cout <<"Age- "<<Age<<endl;
-        
     }
     Employee(string name, string company, int age){
         Name = name;
         Company = company;
         Age = age;
     }
-
 };
 
 int main(){
